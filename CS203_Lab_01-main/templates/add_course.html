@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Add a New Course</h2>
+<form method="POST" action="{{ url_for('add_course') }}">
+    <div class="mb-3">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+    </div>
+    <div class="mb-3">
+        <label for="code">Code</label>
+        <input type="text" id="course_code" name="code" required>
+    </div>
+    <div class="mb-3">
+        <label for="instructor">Instructor</label>
+        <input type="text" id="instructor" name="instructor">
+    </div>
+    <div class="mb-3">
+        <label for="semester">Semester</label>
+        <input type="text" id="semester" name="semester">
+    </div>
+    <div class="mb-3">
+        <label for="schedule">Schedule</label>
+        <input type="text" id="schedule" name="schedule">
+    </div>
+    <div class="mb-3">
+        <label for="classroom" >Classroom</label>
+        <input type="text" id="classroom" name="classroom">
+    </div>
+    <div class="mb-3">
+        <label for="prerequisites" >Prerequisites</label>
+        <input type="text" id="prerequisites" name="prerequisites">
+    </div>
+    <div class="mb-3">
+        <label for="grading">Grading</label>
+        <input type="text" id="grading" name="grading">
+    </div>
+    <div class="mb-3">
+        <label for="description">Description</label>
+        <textarea id="description" name="description" rows="4"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Add Course</button>
+</form>
+<a class="back-link" href="{{url_for('index')}}">back to home</a>
+{% endblock %}
